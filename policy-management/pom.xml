@@ -9,7 +9,7 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <modules>
-        <module>../cqrs-es/cqrs-es-core</module>
+        <module>../cqrs-es-core</module>
         <module>policy-common</module>
         <module>policy-cmd</module>
         <module>policy-query</module>
