@@ -5,6 +5,26 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/insurance_db
+    username: postgres
+    password: welcome1
+  kafka:
+    listener:
+      ack-mode: MANUAL_IMMEDIATE
+      poll-timeout: 900000
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: policyConsumer
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: '*'
+
+
+
