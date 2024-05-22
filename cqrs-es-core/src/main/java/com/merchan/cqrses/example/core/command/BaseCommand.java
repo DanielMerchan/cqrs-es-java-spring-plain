@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class BaseCommand extends Message {
+public abstract class BaseCommand extends Message {
     public BaseCommand(String id) {
         super(id);
     }

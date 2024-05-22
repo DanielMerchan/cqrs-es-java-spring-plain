@@ -10,7 +10,7 @@ import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class OpenPolicyCommand extends BaseCommand {
+public class CreatePolicyCommand extends BaseCommand {
     private String organizationId; // Organisation associated to this policy
     private List<String> conditions;
     private LocalDate startDate;
