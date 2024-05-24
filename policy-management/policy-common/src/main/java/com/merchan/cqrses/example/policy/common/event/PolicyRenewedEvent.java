@@ -8,6 +8,8 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
+import java.time.LocalDate;
+
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
@@ -15,4 +17,5 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 public class PolicyRenewedEvent extends BaseEvent {
     private PolicyPeriod policyPeriod;
+    private LocalDate endDate;
 }

@@ -20,5 +20,7 @@ public class PolicyCreatedEvent extends BaseEvent {
     private String organizationId;
     private List<String> conditions;
     private LocalDate startDate;
+    private LocalDate endDate;
     private PolicyPeriod policyPeriod;
+    private LocalDate createdDate;
 }
