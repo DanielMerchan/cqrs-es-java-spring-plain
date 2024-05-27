@@ -22,8 +22,6 @@ public class Policy extends BaseEntity {
     @Id
     private String policyId;
     private String organizationId;
-    @OneToMany(mappedBy = "policy", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<PolicyCondition> conditions;
     private LocalDate startDate;
     private LocalDate endDate;
     private PolicyStatus status;
@@ -38,6 +36,6 @@ public class Policy extends BaseEntity {
 
     @Override
     public int hashCode() {
-        return Objects.hash(policyId, organizationId, conditions, startDate, endDate, status);
+        return Objects.hash(policyId, organizationId, startDate, endDate, status);
     }
 }

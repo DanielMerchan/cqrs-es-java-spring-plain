@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.text.MessageFormat;
 import java.util.logging.Logger;
 
-@Service
+@Service("PolicyRenewedEventHandler")
 public class PolicyRenewedEventHandler implements EventHandler<PolicyRenewedEvent> {
 
     private final PolicyRepository policyRepository;

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.text.MessageFormat;
 import java.util.logging.Logger;
 
-@Service
+@Service("PolicyCancelledEventHandler")
 public class PolicyCancelledEventHandler implements EventHandler<PolicyCancelledEvent> {
 
     private final PolicyRepository policyRepository;

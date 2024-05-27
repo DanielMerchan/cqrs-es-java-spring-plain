@@ -13,7 +13,6 @@ import java.util.List;
 @Data
 public class CreatePolicyCommand extends BaseCommand {
     private String organizationId; // Organisation associated to this policy
-    private List<String> conditions;
     private LocalDate startDate;
     private LocalDate endDate;
 }

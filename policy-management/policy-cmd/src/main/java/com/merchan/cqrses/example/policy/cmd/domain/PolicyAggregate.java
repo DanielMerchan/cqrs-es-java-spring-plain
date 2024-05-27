@@ -26,7 +26,6 @@ public class PolicyAggregate extends AggregateRoot {
         raiseEvent(PolicyCreatedEvent.builder()
                 .id(command.getId())
                 .organizationId(command.getOrganizationId())
-                .conditions(List.copyOf(command.getConditions()))
                 .startDate(command.getStartDate())
                 .endDate(command.getEndDate())
                 .createdDate(LocalDate.now())
