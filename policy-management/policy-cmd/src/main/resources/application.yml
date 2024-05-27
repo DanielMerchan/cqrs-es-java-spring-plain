@@ -1,6 +1,13 @@
 server:
   port: 5001
-
+management:
+  endpoint:
+    beans:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: beans
 spring:
   data:
     mongodb:
