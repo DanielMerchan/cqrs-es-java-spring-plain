@@ -19,7 +19,7 @@ public class PolicyEventStore implements EventStore {
     private final EventStoreRepository eventStoreRepository;
     private final PolicyEventProducer policyEventProducer;
 
-    @Value("${policy.event.kafka.topic}")
+    @Value("${spring.kafka.producer.policy.topic}")
     private String policyEventsTopic;
 
     public PolicyEventStore(EventStoreRepository eventStoreRepository, PolicyEventProducer policyEventProducer) {
