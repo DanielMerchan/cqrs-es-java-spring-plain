@@ -20,11 +20,13 @@ public class PolicyAggregate extends AggregateRoot {
     private LocalDate endDate;
 
     public PolicyAggregate(CreatePolicyCommand command) {
+        if (command.getStartDate().isAfter(command.getEndDate()) || command.getEndDate().isEqual(command.getStartDate())) {
+            throw new IllegalStateException("Start date cannot be after end date");
+        }
         raiseEvent(PolicyCreatedEvent.builder()
                 .id(command.getId())
                 .organizationId(command.getOrganizationId())
                 .conditions(List.copyOf(command.getConditions()))
-                .policyPeriod(command.getPolicyPeriod())
                 .startDate(command.getStartDate())
                 .endDate(command.getEndDate())
                 .createdDate(LocalDate.now())

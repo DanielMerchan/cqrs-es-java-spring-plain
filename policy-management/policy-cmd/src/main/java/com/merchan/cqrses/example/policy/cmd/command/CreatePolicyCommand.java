@@ -16,5 +16,4 @@ public class CreatePolicyCommand extends BaseCommand {
     private List<String> conditions;
     private LocalDate startDate;
     private LocalDate endDate;
-    private PolicyPeriod policyPeriod;
 }
