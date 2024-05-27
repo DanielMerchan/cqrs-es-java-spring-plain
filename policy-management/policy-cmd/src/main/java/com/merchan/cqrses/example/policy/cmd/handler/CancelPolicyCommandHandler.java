@@ -11,8 +11,8 @@ public class CancelPolicyCommandHandler implements CommandHandler<CancelPolicyCo
 
     private final EventSourceHandler<PolicyAggregate> eventSourceHandler;
 
-    public CancelPolicyCommandHandler(EventSourceHandler<PolicyAggregate> eventSourceHandler, EventSourceHandler<PolicyAggregate> eventSourceHandler1) {
-        this.eventSourceHandler = eventSourceHandler1;
+    public CancelPolicyCommandHandler(EventSourceHandler<PolicyAggregate> eventSourceHandler) {
+        this.eventSourceHandler = eventSourceHandler;
     }
 
     @Override

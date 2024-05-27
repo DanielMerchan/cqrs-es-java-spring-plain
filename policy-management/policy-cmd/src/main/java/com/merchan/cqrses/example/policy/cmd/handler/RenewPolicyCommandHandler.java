@@ -11,8 +11,8 @@ public class RenewPolicyCommandHandler implements CommandHandler<RenewPolicyComm
 
     private final EventSourceHandler<PolicyAggregate> eventSourceHandler;
 
-    public RenewPolicyCommandHandler(EventSourceHandler<PolicyAggregate> eventSourceHandler, EventSourceHandler<PolicyAggregate> eventSourceHandler1) {
-        this.eventSourceHandler = eventSourceHandler1;
+    public RenewPolicyCommandHandler(EventSourceHandler<PolicyAggregate> eventSourceHandler) {
+        this.eventSourceHandler = eventSourceHandler;
     }
 
     @Override

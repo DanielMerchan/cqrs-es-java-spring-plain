@@ -30,12 +30,13 @@ public class PolicyAggregate extends AggregateRoot {
                 .startDate(command.getStartDate())
                 .endDate(command.getEndDate())
                 .createdDate(LocalDate.now())
+                .status(PolicyStatus.LIVE)
                 .build());
     }
 
     public void apply(PolicyCreatedEvent event) {
         this.id = event.getId();
-        this.policyStatus = PolicyStatus.LIVE;
+        this.policyStatus = event.getStatus();
         this.endDate = event.getEndDate();
     }
 

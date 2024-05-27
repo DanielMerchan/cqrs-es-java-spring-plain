@@ -2,6 +2,7 @@ package com.merchan.cqrses.example.policy.common.event;
 
 import com.merchan.cqrses.example.core.event.BaseEvent;
 import com.merchan.cqrses.example.policy.common.enums.PolicyPeriod;
+import com.merchan.cqrses.example.policy.common.enums.PolicyStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -21,6 +22,6 @@ public class PolicyCreatedEvent extends BaseEvent {
     private List<String> conditions;
     private LocalDate startDate;
     private LocalDate endDate;
-    private PolicyPeriod policyPeriod;
     private LocalDate createdDate;
+    private PolicyStatus status;
 }

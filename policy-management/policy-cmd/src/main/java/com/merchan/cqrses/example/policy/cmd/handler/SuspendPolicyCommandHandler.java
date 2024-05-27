@@ -11,8 +11,8 @@ public class SuspendPolicyCommandHandler implements CommandHandler<SuspendPolicy
 
     private final EventSourceHandler<PolicyAggregate> eventSourceHandler;
 
-    public SuspendPolicyCommandHandler(EventSourceHandler<PolicyAggregate> eventSourceHandler, EventSourceHandler<PolicyAggregate> eventSourceHandler1) {
-        this.eventSourceHandler = eventSourceHandler1;
+    public SuspendPolicyCommandHandler(EventSourceHandler<PolicyAggregate> eventSourceHandler) {
+        this.eventSourceHandler = eventSourceHandler;
     }
 
     @Override
