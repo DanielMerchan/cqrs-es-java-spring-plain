@@ -32,6 +32,7 @@ public class PolicyRenewedEventHandler implements EventHandler<PolicyRenewedEven
                 case TWO_YEAR -> policy.setEndDate(event.getEndDate().plusYears(2));
             }
             policy.setEndDate(event.getEndDate());
+            policyRepository.save(policy);
         } else {
             logger.warning(MessageFormat.format("Policy {0} does not exist", event.getId()));
         }

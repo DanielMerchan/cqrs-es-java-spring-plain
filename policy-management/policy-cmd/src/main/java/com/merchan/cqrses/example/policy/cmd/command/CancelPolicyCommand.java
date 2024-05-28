@@ -4,7 +4,8 @@ import com.merchan.cqrses.example.core.command.BaseCommand;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-@EqualsAndHashCode(callSuper = true)
-@Data
 public class CancelPolicyCommand extends BaseCommand {
+    public CancelPolicyCommand(String id) {
+        super(id);
+    }
 }
