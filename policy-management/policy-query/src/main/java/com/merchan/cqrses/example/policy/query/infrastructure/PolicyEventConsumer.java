@@ -18,7 +18,7 @@ public class PolicyEventConsumer implements EventConsumer<BaseEvent> {
         this.applicationContext = applicationContext;
     }
 
-    @KafkaListener(topics ="${spring.kafka.consumer.policy.topic}", groupId = "${spring.kafka.consumer.group-id")
+    @KafkaListener(topics ="${spring.kafka.consumer.policy.topic}", groupId = "${spring.kafka.consumer.group-id}")
     @Override
     public void accept(@Payload BaseEvent event, Acknowledgment ack) {
         String handlerBeanName = event.getClass().getSimpleName() + "Handler";
