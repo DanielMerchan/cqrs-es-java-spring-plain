@@ -1,4 +1,4 @@
-package com.merchan.cqrses.example.policy.query.handler;
+package com.merchan.cqrses.example.policy.query.handler.event;
 
 import com.merchan.cqrses.example.core.handler.EventHandler;
 import com.merchan.cqrses.example.policy.common.enums.PolicyPeriod;
