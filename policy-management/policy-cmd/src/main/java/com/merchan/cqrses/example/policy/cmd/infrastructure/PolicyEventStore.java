@@ -3,6 +3,7 @@ package com.merchan.cqrses.example.policy.cmd.infrastructure;
 import com.merchan.cqrses.example.core.event.BaseEvent;
 import com.merchan.cqrses.example.core.event.EventModel;
 import com.merchan.cqrses.example.core.exception.AggregateNotFoundException;
+import com.merchan.cqrses.example.core.infrastructure.EventProducer;
 import com.merchan.cqrses.example.core.infrastructure.EventStore;
 import com.merchan.cqrses.example.policy.cmd.domain.PolicyAggregate;
 import com.merchan.cqrses.example.policy.common.exception.ConcurrencyException;
@@ -17,14 +18,14 @@ import java.util.List;
 public class PolicyEventStore implements EventStore {
 
     private final EventStoreRepository eventStoreRepository;
-    private final PolicyEventProducer policyEventProducer;
+    private final EventProducer<BaseEvent> eventProducer;
 
     @Value("${spring.kafka.producer.policy.topic}")
     private String policyEventsTopic;
 
-    public PolicyEventStore(EventStoreRepository eventStoreRepository, PolicyEventProducer policyEventProducer) {
+    public PolicyEventStore(EventStoreRepository eventStoreRepository, EventProducer<BaseEvent> eventProducer) {
         this.eventStoreRepository = eventStoreRepository;
-        this.policyEventProducer = policyEventProducer;
+        this.eventProducer = eventProducer;
     }
 
     @Override
@@ -46,7 +47,7 @@ public class PolicyEventStore implements EventStore {
                     .eventData(event)
                     .build();
             eventStoreRepository.save(eventModel);
-            policyEventProducer.produce(policyEventsTopic, event);
+            eventProducer.produce(policyEventsTopic, event);
         }
 
     }
