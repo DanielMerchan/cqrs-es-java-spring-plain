@@ -7,6 +7,10 @@ This is an example of CQRS (Command Query Responsibility Segregation) using Even
 - The project tries to follow a DDD package structure. However, maybe some classes are not located where they should.
 - Heavy use of **Mediator** pattern in different ways. Example: Handlers have been separated in different classes instead of being in the same class.
 
+## Diagram
+
+![alt text](https://github.com/DanielMerchan/cqrs-es-java-spring-plain/blob/main/CQRS-ES-Diagram.png?raw=true)
+
 # Steps
 Follow carefully the steps named in the files `<step>.md` to understand how to build this project.
 
