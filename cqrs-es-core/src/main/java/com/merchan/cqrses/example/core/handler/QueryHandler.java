@@ -7,5 +7,5 @@ import java.util.List;
 
 @FunctionalInterface
 public interface QueryHandler<T extends BaseQuery> {
-    List<BaseEntity> handle(T query);
+    <U extends BaseEntity> List<U> handle(T query);
 }

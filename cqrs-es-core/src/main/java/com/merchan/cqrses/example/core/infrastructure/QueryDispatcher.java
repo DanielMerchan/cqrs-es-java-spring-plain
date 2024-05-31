@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface QueryDispatcher {
     <T extends BaseQuery> void registerQueryHandler(Class<T> queryType, QueryHandler<T> queryHandler);
-    <T extends BaseQuery> List<BaseEntity> dispatch(T query);
+    <U extends BaseEntity> List<U> dispatch(BaseQuery query);
 }

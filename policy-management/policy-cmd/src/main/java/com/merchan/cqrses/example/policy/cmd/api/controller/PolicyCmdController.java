@@ -17,12 +17,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @RestController
-@RequestMapping("/api/v1/policies")
-public class PolicyController {
-    private final Logger logger = Logger.getLogger(PolicyController.class.getName());
+@RequestMapping("/api/v1/cmd/policies")
+public class PolicyCmdController {
+    private final Logger logger = Logger.getLogger(PolicyCmdController.class.getName());
     private final CommandDispatcher commandDispatcher;
 
-    public PolicyController(CommandDispatcher commandDispatcher) {
+    public PolicyCmdController(CommandDispatcher commandDispatcher) {
         this.commandDispatcher = commandDispatcher;
     }
 

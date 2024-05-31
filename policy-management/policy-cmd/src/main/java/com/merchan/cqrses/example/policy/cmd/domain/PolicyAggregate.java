@@ -8,6 +8,7 @@ import com.merchan.cqrses.example.policy.common.event.PolicyCancelledEvent;
 import com.merchan.cqrses.example.policy.common.event.PolicyCreatedEvent;
 import com.merchan.cqrses.example.policy.common.event.PolicyRenewedEvent;
 import com.merchan.cqrses.example.policy.common.event.PolicySuspendedEvent;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
@@ -16,6 +17,7 @@ import java.util.List;
 @NoArgsConstructor
 public class PolicyAggregate extends AggregateRoot {
 
+    @Getter
     private PolicyStatus policyStatus;
     private LocalDate endDate;
 

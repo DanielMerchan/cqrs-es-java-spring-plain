@@ -21,8 +21,8 @@ public class PolicyQueryDispatcher implements QueryDispatcher {
     }
 
     @Override
-    public <T extends BaseQuery> List<BaseEntity> dispatch(T query) {
-        QueryHandler<T> queryHandler = (QueryHandler<T>) handlers.get(query.getClass());
+    public <U extends BaseEntity> List<U> dispatch(BaseQuery query) {
+        QueryHandler<BaseQuery> queryHandler = (QueryHandler<BaseQuery>) handlers.get(query.getClass());
         if (queryHandler == null) {
             throw new IllegalStateException("No handler registered for " + query.getClass().getName());
         }

@@ -60,4 +60,13 @@ public class PolicyEventStore implements EventStore {
         }
         return eventList.stream().map(EventModel::getEventData).toList();
     }
+
+    @Override
+    public List<String> getAggregateIds() {
+        var eventList = eventStoreRepository.findAll();
+        if (eventList.isEmpty()) {
+            throw new IllegalStateException("Event list is empty");
+        }
+        return eventList.stream().map(EventModel::getAggregateId).toList();
+    }
 }
