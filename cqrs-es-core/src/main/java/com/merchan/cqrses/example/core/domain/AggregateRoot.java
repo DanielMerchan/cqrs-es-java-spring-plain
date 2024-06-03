@@ -1,15 +1,15 @@
 package com.merchan.cqrses.example.core.domain;
 
+import com.merchan.cqrses.example.core.event.BaseEvent;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.lang.reflect.InvocationTargetException;
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.merchan.cqrses.example.core.event.BaseEvent;
-import lombok.Getter;
-import lombok.Setter;
 
 public abstract class AggregateRoot {
 

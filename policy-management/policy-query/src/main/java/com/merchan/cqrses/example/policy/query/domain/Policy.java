@@ -2,14 +2,11 @@ package com.merchan.cqrses.example.policy.query.domain;
 
 import com.merchan.cqrses.example.core.domain.BaseEntity;
 import com.merchan.cqrses.example.policy.common.enums.PolicyStatus;
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Objects;
 
 @Entity

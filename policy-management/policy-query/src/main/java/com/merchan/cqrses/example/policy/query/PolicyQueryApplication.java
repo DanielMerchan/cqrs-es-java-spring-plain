@@ -1,10 +1,8 @@
 package com.merchan.cqrses.example.policy.query;
 
-import com.merchan.cqrses.example.core.handler.CommandHandler;
 import com.merchan.cqrses.example.core.handler.QueryHandler;
 import com.merchan.cqrses.example.core.infrastructure.QueryDispatcher;
 import com.merchan.cqrses.example.core.query.BaseQuery;
-import com.merchan.cqrses.example.policy.query.handler.query.FindAllPoliciesQueryHandler;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,12 +16,10 @@ public class PolicyQueryApplication implements CommandLineRunner {
 
 	private final ApplicationContext applicationContext;
 	private final QueryDispatcher queryDispatcher;
-	private final FindAllPoliciesQueryHandler findAllPoliciesQueryHandler;
 
-	public PolicyQueryApplication(ApplicationContext applicationContext, QueryDispatcher queryDispatcher, FindAllPoliciesQueryHandler findAllPoliciesQueryHandler) {
+	public PolicyQueryApplication(ApplicationContext applicationContext, QueryDispatcher queryDispatcher) {
 		this.applicationContext = applicationContext;
 		this.queryDispatcher = queryDispatcher;
-		this.findAllPoliciesQueryHandler = findAllPoliciesQueryHandler;
 	}
 
 	public static void main(String[] args) {
