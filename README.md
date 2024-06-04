@@ -9,7 +9,7 @@ This is an example of CQRS (Command Query Responsibility Segregation) using Even
 
 ## Diagram
 
-![alt text](https://github.com/DanielMerchan/cqrs-es-java-spring-plain/blob/main/CQRS-ES-Diagram.png)
+![alt text](https://github.com/DanielMerchan/cqrs-es-java-spring-plain/blob/main/CQRS-ES-Diagram.png?raw=true)
 
 # Steps
 Follow carefully the steps named in the files `<step>.md` to understand how to build this project.
